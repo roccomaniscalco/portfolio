@@ -65,6 +65,8 @@ body {
   background-color: #1a1a1a;
 }
 
+/* NAV */
+
 nav {
   position: fixed;
   top: 35px;
@@ -88,6 +90,8 @@ nav {
   color: white;
 }
 
+/* LANDING */
+
 #landing {
   height: 100vh;
   padding: 0 5vw;
@@ -105,6 +109,8 @@ nav {
   line-height: 1em;
   color: #41b95b;
 }
+
+/* MAIN CONTENT */
 
 main {
   margin: 0 calc(25vw - 140px);
@@ -153,13 +159,17 @@ main section a {
   color: #41b95b;
 }
 
-section#about {
+/* 01 ABOUT */
+
+#about {
   max-width: 900px;
   display: flex;
   align-items: center;
 }
 
-section#projects {
+/* 02 PROJECTS */
+
+#projects {
   max-width: 900px;
 }
 
@@ -171,12 +181,12 @@ section#projects {
   padding: 10px 0 0 0;
 }
 
-#projectGrid .project {
+.project {
   position: relative;
-  transition: transform .2s cubic-bezier(.5,0,.5,1);
+  transition: transform 0.2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 
-#projectGrid a.site {
+a.site {
   position: absolute;
   top: 0;
   right: 0;
@@ -184,20 +194,20 @@ section#projects {
   left: 0;
 }
 
-#projectGrid .project .inner {
+.inner {
   position: relative;
   pointer-events: none;
   z-index: 1;
 }
 
-#projectGrid .project .inner img {
+.inner img {
   width: 100%;
   height: auto;
   border-radius: 25px;
-  transition: opacity .2s cubic-bezier(.5,0,.5,1);
+  transition: opacity 0.2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 
-#projectGrid .project .inner h3 {
+.inner h3 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 32px;
@@ -209,26 +219,28 @@ section#projects {
   padding: 30px 80px 30px 30px;
 }
 
-#projectGrid .project .inner a.repo {
+a.repo {
   pointer-events: all;
   color: white;
   position: absolute;
   right: 30px;
   bottom: 30px;
-  transition: opacity .2s cubic-bezier(.5,0,.5,1);
+  transition: opacity 0.2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 
-#projectGrid .project:hover {
+.project:hover {
   transform: translateY(-5px);
 }
 
-#projectGrid .project:hover .inner img {
+.project:hover img {
   opacity: 50%;
 }
 
-#projectGrid .project .inner a.repo:hover {
+a.repo:hover {
   opacity: 50%;
 }
+
+/* MEDIA QUERIES */
 
 @media only screen and (max-width: 678px) {
   main {
@@ -238,10 +250,10 @@ section#projects {
     grid-template-columns: 100%;
     row-gap: 50px;
   }
-  #projectGrid .project .inner h3 {
+  .inner h3 {
     padding: 40px 120px 40px 40px;
   }
-  #projectGrid .project .inner a.repo {
+  a.repo {
     right: 40px;
     bottom: 40px;
   }
@@ -260,11 +272,11 @@ section#projects {
   main section header .num {
     font-size: 180px;
   }
-  #projectGrid .project .inner h3 {
+  .inner h3 {
     padding: 30px 80px 30px 30px;
     font-size: 24px;
   }
-  #projectGrid .project .inner a.repo {
+  .inner a.repo {
     right: 30px;
     bottom: 30px;
   }
