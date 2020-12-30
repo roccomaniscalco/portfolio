@@ -97,11 +97,8 @@ body {
   height: 4px;
   margin: 0px 0px 18px 0px;
   transition: all 0.2s cubic-bezier(0.5, 0, 0.5, 1);
+  border-radius: 25px;
 }
-
-/* #hamburger:hover div {
-  background-color: #41b95b;
-} */
 
 #hamburger.open #line1{
   transform: rotate(45deg) translateY(16px) translateX(15px);
@@ -122,7 +119,7 @@ nav {
   position: fixed;
   transform: translateX(100%);
   height: 100%;
-  width: 160px;
+  width: 170px;
   z-index: 2;
   transition: transform 0.2s cubic-bezier(0.5, 0, 0.5, 1);
 }
@@ -165,17 +162,21 @@ nav a:hover {
 
 #me {
   position: absolute;
-  opacity: 70%;
   bottom: 0;
   height: 95vh;
   z-index: -1;
   left: 50%;
   transform: translateX(-50%);
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(#00000099), to(#00000000));
+  mask-image: linear-gradient(to bottom, #00000099, #00000000);
 }
 
 #title {
   text-align: center;
-  padding: 60vh 0 0 0;
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #title h1 {
@@ -184,7 +185,6 @@ nav a:hover {
   font-size: calc(7vw + 25px);
   line-height: 1em;
   color: #41b95b;
-  filter: drop-shadow(0 0 2vw #1a1a1a);
 }
 
 /* MAIN CONTENT */
@@ -194,8 +194,7 @@ main {
 }
 
 main section {
-  padding: 20vh 0;
-  min-height: 100vh;
+  padding: 200px 0;
 }
 
 main section header {
