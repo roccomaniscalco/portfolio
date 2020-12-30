@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rocco Maniscalco</title>
-    <base target="_blank" rel="noopener noreferrer" />
     <script
       src="https://kit.fontawesome.com/76d5191670.js"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js"></script>
     <!-- <link
       rel="preload"
       as="font"
@@ -46,12 +46,22 @@
         <strong>ROCCO</strong>
         <strong>MANISCALCO</strong>
       </div>
-      <nav>
-        <img id="hamburger" src="./assets/hamburger.png" alt="" />
-      </nav>
+      <i id="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </i>
     </header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     <!-- LANDING PAGE -->
     <section id="landing">
+      <img id="me" src="./assets/me.png" alt="" />
       <div id="title">
         <h1>Full Stack</h1>
         <h1>Developer</h1>
@@ -93,9 +103,11 @@
             ></a>
             <div class="inner">
               <img src="./assets/covid.png" alt="" />
-              <h3>COVID Cost</h3>
+              <h3>COVID Cost ➜</h3>
               <a
                 href="https://github.com/roccomaniscalco/covid-cost"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="repo"
               >
                 <i class="fab fa-github fa-2x" aria-hidden="true"></i>
@@ -105,6 +117,8 @@
           <div class="project">
             <a
               href="https://roccomaniscalco.github.io/weather-dashboard/"
+              target="_blank"
+              rel="noopener noreferrer"
               class="site"
             ></a>
             <div class="inner">
@@ -120,6 +134,15 @@
           </div>
         </div>
       </section>
+      <!-- 03 CONTACT -->
+      <div id="contactBackground">
+        <section id="contact">
+          <header>
+            <span class="num">03</span>
+            <h2>Contact</h2>
+          </header>
+        </section>
+      </div>
     </main>
   </body>
 </html>
