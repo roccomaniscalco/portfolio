@@ -63,7 +63,6 @@
 
 body {
   background-color: #1a1a1a;
-  
 }
 
 /* NAV */
@@ -81,23 +80,39 @@ body {
   font-weight: 600;
   font-size: 24px;
   line-height: 30px;
-  color: white;
+  color: #e2e2e2;
 }
 
 #hamburger {
   position: fixed;
   top: 35px;
   right: 30px;
-  z-index: 2;
   cursor: pointer;
   z-index: 3;
 }
 
-.line {
-  background-color: white;
+#hamburger div {
+  background-color: #e2e2e2;
   width: 40px;
   height: 4px;
   margin: 0px 0px 18px 0px;
+  transition: all 0.2s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+/* #hamburger:hover div {
+  background-color: #41b95b;
+} */
+
+#hamburger.open #line1{
+  transform: rotate(45deg) translateY(16px) translateX(15px);
+}
+
+#hamburger.open #line2{
+  opacity: 0%;
+}
+
+#hamburger.open #line3{
+  transform: rotate(-45deg) translateY(-16px) translateX(15px);
 }
 
 nav {
@@ -107,9 +122,9 @@ nav {
   position: fixed;
   transform: translateX(100%);
   height: 100%;
-  width: 180px;
-  transition: transform 0.2s cubic-bezier(0.5, 0, 0.5, 1);
+  width: 160px;
   z-index: 2;
+  transition: transform 0.2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 nav.open {
@@ -132,6 +147,11 @@ nav a {
   line-height: 90px;
   color: #e2e2e2;
   text-decoration: none;
+  transition: color 0.1s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+nav a:hover {
+  color: #41b95b;
 }
 
 /* LANDING */
@@ -156,7 +176,6 @@ nav a {
 #title {
   text-align: center;
   padding: 60vh 0 0 0;
-  filter: brightness(120%);
 }
 
 #title h1 {
@@ -164,8 +183,8 @@ nav a {
   font-weight: 900;
   font-size: calc(7vw + 25px);
   line-height: 1em;
-  color: #39A250;
-  /* filter: drop-shadow(0 0 2vw #1a1a1a); */
+  color: #41b95b;
+  filter: drop-shadow(0 0 2vw #1a1a1a);
 }
 
 /* MAIN CONTENT */
@@ -188,7 +207,7 @@ main section header h2 {
   font-weight: 700;
   font-size: 48px;
   line-height: 3em;
-  color: white;
+  color: #e2e2e2;
   margin: 0 0 1em 0;
 }
 
@@ -268,7 +287,7 @@ a.site {
   font-weight: 700;
   font-size: 32px;
   line-height: 1em;
-  color: white;
+  color: #e2e2e2;
   position: absolute;
   left: 0;
   top: 0;
@@ -277,7 +296,7 @@ a.site {
 
 a.repo {
   pointer-events: all;
-  color: white;
+  color: #e2e2e2;
   position: absolute;
   right: 30px;
   bottom: 30px;
