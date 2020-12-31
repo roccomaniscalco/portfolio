@@ -197,6 +197,7 @@ main {
 
 main section {
   padding: 200px 0;
+  max-width: 950px;
 }
 
 main section header {
@@ -239,18 +240,11 @@ main section a {
 
 /* 01 ABOUT */
 
-#about {
-  max-width: 900px;
-}
-
 /* 02 PROJECTS */
-
-#projects {
-  max-width: 900px;
-}
 
 #projectGrid {
   display: grid;
+  grid-template-rows: auto auto;
   grid-template-columns: 47% 47%;
   column-gap: 6%;
   row-gap: 5%;
@@ -305,6 +299,58 @@ a.repo {
 }
 
 /* 03 CONTACT */
+
+#contactGrid {
+  display: grid;
+  grid-template-rows: 442px;
+  grid-template-columns: 433px auto;
+  column-gap: 6%;
+}
+
+#contactInfo {
+  border-radius: 25px;
+  border: 2px solid #272727;
+}
+
+#contactInfo a {
+  display: block;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 19px;
+  color: #e2e2e2;
+  padding: 18px 0 30px 25px;
+  border-bottom: 2px solid #272727;
+  transition: background-color .2s cubic-bezier(0.3, 0, 0.5, 1);
+}
+
+#contactInfo a:hover {
+  background-color: #171717;
+}
+
+#contactInfo i {
+  padding: 0 10px 0 0;
+  color: #e2e2e2;
+  transform: translateY(6px);
+}
+
+#contactInfo :nth-child(1) {
+  border-radius: 25px 25px 0 0;
+}
+
+#contactInfo :nth-child(5) {
+  border-bottom: none;
+  border-radius: 0 0 25px 25px;
+}
+
+#contactInfo :nth-child(5) i {
+  padding-left: 3px;
+}
+
+#terminal {
+  border-radius: 25px;
+  border: 2px solid #272727;
+}
 
 /* MEDIA QUERIES */
 
