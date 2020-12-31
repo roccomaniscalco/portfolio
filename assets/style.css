@@ -315,8 +315,6 @@ a.repo {
 #contactInfo {
   border-radius: 25px;
   background-color: #171717;
-  overflow-x: hidden;
-  word-wrap: none;
 }
 
 #contactInfo a {
@@ -389,7 +387,7 @@ input {
   display: block;
   resize: none;
   width: 100%;
-  height: 158px;
+  height: 248px;
   padding: 30px;
   border: none;
   border-radius: 0 0 25px 25px;
@@ -445,25 +443,6 @@ input {
 
   #contactInfo a:hover,
   #submit:hover {
-    background-color: #141414;
-  }
-}
-
-@media (pointer: coarse) {
-  nav a:active {
-    color: #41b95b;
-  }
-
-  .project:active img {
-    opacity: 50%;
-  }
-
-  a.repo:active {
-    opacity: 50%;
-  }
-
-  #contactInfo a:active,
-  #submit:active {
     background-color: #141414;
   }
 }
@@ -535,5 +514,9 @@ input {
 
   #contactInfo a {
     font-size: 12px;
+  }
+
+  #messenger {
+    height: 450px;
   }
 }
